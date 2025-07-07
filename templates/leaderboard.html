@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>LeetCode Leaderboard</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2em; }
+    table { border-collapse: collapse; width: 60%; margin-bottom: 2em; }
+    th, td { border: 1px solid #ccc; padding: 0.5em 1em; text-align: left; }
+    th { background: #f0f0f0; }
+    form input { padding: 0.5em; }
+    form button { padding: 0.5em 1em; }
+  </style>
+</head>
+<body>
+  <h1>Leaderboard</h1>
+  <table>
+    <tr><th>#</th><th>User</th><th>Solved</th></tr>
+    {% for row in stats %}
+    <tr><td>{{ loop.index }}</td><td>{{ row.username }}</td><td>{{ row.totalSolved }}</td></tr>
+    {% endfor %}
+  </table>
+  <form method="post" action="/add">
+    <input name="username" placeholder="LeetCode ID" required>
+    <button type="submit">Join</button>
+  </form>
+</body>
+</html>
