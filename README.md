@@ -16,3 +16,5 @@ This repository contains a small Flask app for a private LeetCode leaderboard. I
 The application automatically creates a SQLite database (`leaderboard.db`) to store registered users.
 
 Open `http://localhost:5000/` to view the leaderboard and add your LeetCode ID.
+
+The page now uses [Bootstrap](https://getbootstrap.com/) for a cleaner table and form design. Each row displays the user's total solved problems and their public LeetCode ranking when available.
